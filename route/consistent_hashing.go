@@ -53,7 +53,7 @@ func computeRingPosition(key []byte) uint16 {
 }
 
 func NewConsistentHasher(destinations []*dest.Destination, withFix bool) ConsistentHasher {
-	return NewConsistentHasherReplicaCount(destinations, 100, withFix)
+	return NewConsistentHasherReplicaCount(destinations, 1, withFix)
 }
 
 func NewConsistentHasherReplicaCount(destinations []*dest.Destination, replicaCount int, withFix bool) ConsistentHasher {
